@@ -65,8 +65,8 @@ int main(int argc, const char * argv[])
 			cout << "Doctor-ID: ";
 			srand(time(NULL));
 			doctor1 = (rand() % 10)+ 1;
-			Doctors(doctor1);
 			cout << doctor1 << endl;
+			Doctors(doctor1);
 			checkIn1[count1].setPrimaryDoctorID1(doctor1);
 			cout << "Birthdate " << endl;
 			cout << "Day: ";
@@ -239,16 +239,38 @@ void Doctors(int doctor1)
 {
 	switch (doctor1)
 	{
-		case 0: cout << "Dr. Ahmadia" << endl;
-		case 1: cout << "Dr. Smith" << endl;
-		case 2: cout << "Dr. Nguyen" << endl;
-		case 3: cout << "Dr. Kezzaz" << endl;
-		case 4: cout << "Dr. Banu" << endl;
-		case 5: cout << "Dr. Orn" << endl;
-		case 6: cout << "Dr. Arvizu" << endl;
-		case 7: cout << "Dr. Chavez" << endl;
-		case 8: cout << "Dr. Tran" << endl;
-		case 9: cout << "Dr. Miller" << endl;
+		case 0: 
+			cout << "Dr. Ahmadia" << endl;
+			break;
+		case 1: 
+			cout << "Dr. Smith" << endl;
+			break;
+		case 2: 
+			cout << "Dr. Nguyen" << endl;
+			break;
+		case 3: 
+			cout << "Dr. Kezzaz" << endl;
+			break;
+		case 4: 
+			cout << "Dr. Banu" << endl;
+			break;
+		case 5: 
+			cout << "Dr. Orn" << endl;
+			break;
+		case 6: 
+			cout << "Dr. Arvizu" << endl;
+			break;
+		case 7: 
+			cout << "Dr. Chavez" << endl;
+			break;
+		case 8: 
+			cout << "Dr. Tran" << endl;
+			break;
+		case 9: 
+			cout << "Dr. Miller" << endl;
+			break;
+		default: 
+			cout << "no Doctors found, please try a new ID" << endl;
 	}
 		 
 }

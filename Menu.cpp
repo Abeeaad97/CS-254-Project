@@ -122,15 +122,16 @@ int main(int argc, const char * argv[])
 					if (checkIn1[i1].getID1() == id1)
 					{
 						cout << "Provider-ID: ";
-						cin >> doctor1;
+						cout << patient1[i1].getPrimaryDoctorID1() << endl;
+						Doctors(patient1[i1].getPrimaryDoctorID1());
 						cout << "Procedure-ID: ";
 						cin >> id1;
-						cout << checkIn1[i1].enterProcedure1(current1, id1, doctor1);
+						cout << checkIn1[i1].enterProcedure1(current1, id1, doctor1) << endl;
 						for (int j = 0; j < countAll1; j++)
 							if (patient1[j].getID1() == checkIn1[i1].getID1())
 							{
 								patient1[j].enterProcedure1(current1, id1, doctor1);
-								cout << j;
+								cout << j << endl;
 								cout << "Patient-ID: " << j + 1 << " Checked-Out" << endl << endl;
 							}
 						Remove1(checkIn1, count1, i1);
@@ -161,6 +162,7 @@ int main(int argc, const char * argv[])
 					cout << "Name: " << patient1[i1].getFirstName1() << " " << patient1[i1].getLastName1() << endl;
 					cout << "Birthdate: " << patient1[i1].getBirthDate1() << endl;
 					cout << "Doctor-ID: " << patient1[i1].getPrimaryDoctorID1() << endl;
+					Doctors(patient1[i1].getPrimaryDoctorID1());
 					patient1[i1].printAllProcedures1();
 					found1 = true;
 				}
@@ -180,6 +182,7 @@ int main(int argc, const char * argv[])
 					cout << "Name: " << checkIn1[i1].getFirstName1() << " " << checkIn1[i1].getLastName1() << endl;
 					cout << "Birthdate: " << checkIn1[i1].getBirthDate1() << endl;
 					cout << "Doctor-ID: " << checkIn1[i1].getPrimaryDoctorID1() << endl << endl;
+					Doctors(checkIn1[i1].getPrimaryDoctorID1());
 				}
 			}
 			else

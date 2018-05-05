@@ -8,7 +8,7 @@
 using namespace std;
 void Menu1();
 void Remove1(Patient1 checkIn1[], int& count1, int index1);
-string Doctors(int doctor1);
+void Doctors(int doctor1);
 int main(int argc, const char * argv[])
 {
 	Patient1 checkIn1[10];
@@ -235,7 +235,20 @@ void Remove1(Patient1 checkIn1[], int& count1, int index1)
 		checkIn1[i1] = checkIn1[i1 + 1];
 	count1--;
 }
-string Doctors(int doctor1)
+void Doctors(int doctor1)
 {
-
+	switch (doctor1)
+	{
+		case 0: cout << "Dr. Ahmadia" << endl;
+		case 1: cout << "Dr. Smith" << endl;
+		case 2: cout << "Dr. Nguyen" << endl;
+		case 3: cout << "Dr. Kezzaz" << endl;
+		case 4: cout << "Dr. Banu" << endl;
+		case 5: cout << "Dr. Orn" << endl;
+		case 6: cout << "Dr. Arvizu" << endl;
+		case 7: cout << "Dr. Chavez" << endl;
+		case 8: cout << "Dr. Tran" << endl;
+		case 9: cout << "Dr. Miller" << endl;
+	}
+		 
 }

@@ -2,9 +2,13 @@
 #include <fstream>
 #include "Patient.h"
 #include "Date.h"
+#include <cstdlib>
+#include <ctime>
+#include <string>
 using namespace std;
 void Menu1();
 void Remove1(Patient1 checkIn1[], int& count1, int index1);
+string Doctors(int doctor1);
 int main(int argc, const char * argv[])
 {
 	Patient1 checkIn1[10];
@@ -59,7 +63,10 @@ int main(int argc, const char * argv[])
 			cin >> last1;
 			checkIn1[count1].setLastName1(last1);
 			cout << "Doctor-ID: ";
-			cin >> doctor1;
+			srand(time(NULL));
+			doctor1 = (rand() % 10)+ 1;
+			Doctors(doctor1);
+			cout << doctor1 << endl;
 			checkIn1[count1].setPrimaryDoctorID1(doctor1);
 			cout << "Birthdate " << endl;
 			cout << "Day: ";
@@ -227,4 +234,8 @@ void Remove1(Patient1 checkIn1[], int& count1, int index1)
 	for (int i1 = index1; i1 < count1; i1++)
 		checkIn1[i1] = checkIn1[i1 + 1];
 	count1--;
+}
+string Doctors(int doctor1)
+{
+
 }
